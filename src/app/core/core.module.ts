@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { WrapperComponent } from './wrapper/wrapper.component';
 
 
@@ -9,7 +10,8 @@ import { WrapperComponent } from './wrapper/wrapper.component';
     WrapperComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     WrapperComponent
