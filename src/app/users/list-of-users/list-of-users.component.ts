@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../models/User';
+import { HttpService } from 'src/app/shared/services/http.service';
 
 @Component({
   selector: 'app-list-of-users',
@@ -8,15 +9,26 @@ import { User } from '../models/User';
 })
 export class ListOfUsersComponent implements OnInit {
 
-  users: User[] = [{
-    imgUrl: "https://avatars0.githubusercontent.com/u/1?v=4",
-    name: "mojombo",
-    gitHubUrl: "https://github.com/mojombo"
-  }];
+  users: User[] = [];
+  usersUrl = "users";
 
-  constructor() { }
+  constructor(public http: HttpService) { }
 
   ngOnInit(): void {
+    this.getAllUsers();
+  }
+
+  getAllUsers() {
+    this.http.getElement(this.usersUrl).subscribe(data => {
+      Object.keys(data).map(key =>{
+        let user: User = {
+          name: data[key].login,
+          imgUrl: data[key].avatar_url || "assets/images/default.png",
+          gitHubUrl: data[key].html_url
+        };
+        this.users.push(user);
+      });
+    });
   }
 
 }
