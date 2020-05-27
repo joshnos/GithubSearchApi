@@ -1,27 +1,27 @@
 # GithubSearchApi
 
+This project is a frontend application to see the users and their repositories of GitHub, using the [GitHub API](https://developer.github.com/v3/).
+
+## Web technology used
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
+
+## Libraries used
+
+* [Boostrap](https://getbootstrap.com) version 4.5.0.
+* [jquery](https://jquery.com) version 3.5.1.
+* [ngx-pagination](https://github.com/michaelbromley/ngx-pagination#readme) version 5.0.0.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
 
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Further work
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* Add Interceptors to hold the error handling of the httpService.
+* Add Interceptors for each http function to use a cache of the app instead of the cache of the browser.
+* Add more unit tests to the services and stateful components.
