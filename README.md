@@ -4,7 +4,9 @@ This project is a frontend application to see the users and their repositories o
 
 ## Web technology used
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
+* [Angular](https://angular.io/) version 9.1.9.
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
 ## Libraries used
 
