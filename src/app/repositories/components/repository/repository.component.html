@@ -1,0 +1,12 @@
+<div class="card mb-3 h-100 w-100">
+    <div class="row no-gutters" *ngIf="repository != null">
+        <div class="card-body">
+            <h4 class="card-title">{{ repository.name }}</h4>
+            <p>Description: {{ repository.description }}</p>
+            <p>Isuess: {{ repository.issues }}</p>
+            <p>Open Issues: {{ repository.openIssues }}</p>
+            <p>Forks: {{ repository.forks }}</p>
+            <a class="btn btn-secondary" [href] ="repository.gitHubUrl" target="_blank">GitHub Url</a>
+        </div>
+    </div>
+</div>
