@@ -4,7 +4,7 @@ import { ListOfRepositoriesComponent } from './components/list-of-repositories/l
 
 
 const routes: Routes = [
-  { path: '', component: ListOfRepositoriesComponent }
+  { path: ':username', component: ListOfRepositoriesComponent }
 ];
 
 @NgModule({

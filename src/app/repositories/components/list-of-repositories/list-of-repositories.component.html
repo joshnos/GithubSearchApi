@@ -1,1 +1,5 @@
-<p>list-of-repositories works!</p>
+<div class="row row-cols-4 card-group">
+    <div *ngFor="let repository of repositories">
+        <app-repository [repository]="repository"></app-repository>
+    </div>
+</div>
