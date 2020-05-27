@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { UsersRoutingModule } from './users-routing.module';
-import { ListOfUsersComponent } from './list-of-users/list-of-users.component';
-import { UserComponent } from './user/user.component';
+import { ListOfUsersComponent } from './components/list-of-users/list-of-users.component';
+import { UserComponent } from './components/user/user.component';
 
 
 @NgModule({
