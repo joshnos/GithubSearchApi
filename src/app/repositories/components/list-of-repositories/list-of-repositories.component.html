@@ -1,7 +1,7 @@
 <div class="page">
     <h5>Page: {{ p }}</h5>
 </div>
-<div class="row row-cols-4 card-group">
+<div class="row row-cols-4 card-deck">
     <div *ngFor="let repository of repositories | paginate: { itemsPerPage: 8, currentPage: p }">
         <app-repository [repository]="repository"></app-repository>
     </div>
