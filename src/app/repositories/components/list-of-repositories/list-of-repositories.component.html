@@ -1,5 +1,6 @@
 <div class="page">
-    <h5>Page: {{ p }}</h5>
+    <h2 class="ion-justify-content-center">Repositories</h2>
+    <h5 class="ion-justify-content-end">Page: {{ p }}</h5>
 </div>
 <div class="row row-cols-4 card-deck">
     <div *ngFor="let repository of repositories | paginate: { itemsPerPage: 8, currentPage: p }">

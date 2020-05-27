@@ -27,7 +27,7 @@ export class ListOfRepositoriesComponent implements OnInit {
         let repository: Repository = {
           id: data[key].id,
           name: data[key].name,
-          description: data[key].avatar_url || "",
+          description: data[key].description || "",
           gitHubUrl: data[key].html_url,
           issues: data[key].open_issues_count,
           openIssues: data[key].open_issues,
