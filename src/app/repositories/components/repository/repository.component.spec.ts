@@ -22,4 +22,9 @@ describe('RepositoryComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have a undefined repository', () => {
+    expect(component.repository).toBeUndefined();
+  });
+
 });

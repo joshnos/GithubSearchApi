@@ -22,4 +22,9 @@ describe('UserComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have a undefined user', () => {
+    expect(component.user).toBeUndefined();
+  });
+
 });
