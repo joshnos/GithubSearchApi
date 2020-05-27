@@ -15,13 +15,14 @@ export class ListOfUsersComponent implements OnInit {
   constructor(public http: HttpService) { }
 
   ngOnInit(): void {
-    this.getAllUsers();
+    this.getUsers();
   }
 
-  getAllUsers() {
+  getUsers() {
     this.http.getElement(this.usersUrl).subscribe(data => {
       Object.keys(data).map(key =>{
         let user: User = {
+          id: data[key].id,
           name: data[key].login,
           imgUrl: data[key].avatar_url || "assets/images/default.png",
           gitHubUrl: data[key].html_url
@@ -29,6 +30,13 @@ export class ListOfUsersComponent implements OnInit {
         this.users.push(user);
       });
     });
+  }
+
+  getMoreUsers(e) {
+    let users = "users";
+    let lastId = this.users[this.users.length - 1].id;
+    this.usersUrl = users + "?since=" + lastId;
+    this.getUsers();
   }
 
 }
