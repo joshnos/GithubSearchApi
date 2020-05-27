@@ -1,5 +1,10 @@
+<div class="page">
+    <h5>Page: {{ p }}</h5>
+</div>
 <div class="row row-cols-4 card-group">
-    <div *ngFor="let repository of repositories">
+    <div *ngFor="let repository of repositories | paginate: { itemsPerPage: 8, currentPage: p }">
         <app-repository [repository]="repository"></app-repository>
     </div>
 </div>
+             
+<pagination-controls (pageChange)="p = $event"></pagination-controls>

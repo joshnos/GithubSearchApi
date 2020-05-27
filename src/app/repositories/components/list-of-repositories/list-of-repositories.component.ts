@@ -12,6 +12,7 @@ export class ListOfRepositoriesComponent implements OnInit {
 
   repositories: Repository[] = [];
   repositoryUrl = "users/" + this.activatedRoute.snapshot.params.username + "/repos";
+  p: number = 1;
 
   constructor( public http: HttpService, private activatedRoute: ActivatedRoute ) { }
 
